@@ -1,0 +1,29 @@
+<h1>Stats</h1>
+<p>Branches count <%= @branches_size%></p>
+<p>Orgs count <%= @orgs_size%></p>
+<p>Feedbacks count <%= @feedbacks_size%></p>
+
+
+<h1>Calculated feedback from BRANCH REWE-05</h1>
+<%= @first %>
+
+<h1>Determined frequency distribution of organization Fitx</h1>
+
+<% @second.each do |el| %>
+  <p><%= el %></p>
+<% end %>
+
+<h1>Determine a cross table for Douglas w.r.t. age group and quality where entries are numbers of feedback</h1>
+<% @third.each do |el| %>
+  <p><%= el %></p>
+<% end %>
+
+<h1>Determine a ranking for all branches of BMW w.r.t. average of quality</h1>
+<% @fourth.each do |el| %>
+  <p><%= el %></p>
+<% end %>
+
+<h1>Calculate all net promter scores for all org-s and display them</h1>
+<% @fifth.each do |el| %>
+  <p><%= el %></p>
+<% end %>
