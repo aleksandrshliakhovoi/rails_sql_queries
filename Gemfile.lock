@@ -80,6 +80,12 @@ GEM
     erubi (1.12.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    google-protobuf (3.21.12-x86_64-linux)
+    googleapis-common-protos-types (1.5.0)
+      google-protobuf (~> 3.14)
+    grpc (1.52.0-x86_64-linux)
+      google-protobuf (~> 3.21)
+      googleapis-common-protos-types (~> 1.0)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     io-console (0.6.0)
@@ -106,6 +112,10 @@ GEM
       timeout
     net-smtp (0.3.3)
       net-protocol
+    newrelic-infinite_tracing (8.16.0)
+      grpc (~> 1.34)
+      newrelic_rpm (= 8.16.0)
+    newrelic_rpm (8.16.0)
     nio4r (2.5.8)
     nokogiri (1.14.0-x86_64-linux)
       racc (~> 1.4)
@@ -168,6 +178,8 @@ PLATFORMS
 DEPENDENCIES
   debug
   dotenv-rails
+  newrelic-infinite_tracing
+  newrelic_rpm
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.1)

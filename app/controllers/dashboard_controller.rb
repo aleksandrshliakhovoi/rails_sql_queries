@@ -80,7 +80,7 @@ class DashboardController < ApplicationController
       key = company.name
       hash1[key] = { total: 0, promoters: 0, detractors: 0 } if hash1[key].blank?
 
-      if company.nps <= 6 
+      if company.nps <= 6
         hash1[key][:detractors] += company.count
       elsif company.nps >= 9
         hash1[key][:promoters] += company.count
