@@ -24,6 +24,5 @@ test:
 
 production:
   <<: *default
-  database: rails_slq_production
-  username: rails_slq
-  password: <%= ENV["RAILS_SLQ_DATABASE_PASSWORD"] %>
+  database: <%= ENV['DATABASE_URL'] %>
+

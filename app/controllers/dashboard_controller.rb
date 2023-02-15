@@ -8,6 +8,8 @@ class DashboardController < ApplicationController
     fourth_task
     fifth_task
     stats
+    high_load_db_with_error
+    # error_here
   end
 
   private
@@ -95,6 +97,24 @@ class DashboardController < ApplicationController
 
       hash2[key] += (v[1][:promoters] * 100 / v[1][:total]).to_f -
                     (v[1][:detractors] * 100 / v[1][:total]).to_f
+    end
+  end
+
+  # def high_load_db
+  #   10000.times do
+  #     fifth_task
+  #   end
+  # end
+
+  def high_load_db_with_error
+    10000.times do
+      fifth_task
+    end
+
+    begin
+      qwerty
+    rescue => e
+      puts e
     end
   end
 end
