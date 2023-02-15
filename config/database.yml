@@ -22,7 +22,12 @@ test:
   <<: *default
   database: rails_slq_test
 
+# production:
+#   <<: *default
+#   database: <%= ENV['RDS_DB_NAME'] %>
+#   username: <%= ENV['RDS_USERNAME'] %>
+#   password: <%= ENV['RDS_PASSWORD'] %>
+#   host: <%= ENV['RDS_HOSTNAME'] %>
+#   port: 5432
 production:
-  <<: *default
-  database: <%= ENV['DATABASE_URL'] %>
-
+  url: <%= ENV['DATABASE_URL'] %>

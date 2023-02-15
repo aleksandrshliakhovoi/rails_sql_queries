@@ -12,10 +12,10 @@ gem "rails", "~> 7.0.4", ">= 7.0.4.1"
 gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
-gem "pg", "~> 1.1"
+gem "pg", "= 1.2.3"
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem "puma", "~> 5.0"
+gem "puma", "= 6.0.2"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
