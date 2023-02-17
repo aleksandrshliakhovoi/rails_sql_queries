@@ -112,7 +112,7 @@ class DashboardController < ApplicationController
     end
 
     begin
-      qwerty
+      #qwerty
     rescue => e
       puts e
     end
