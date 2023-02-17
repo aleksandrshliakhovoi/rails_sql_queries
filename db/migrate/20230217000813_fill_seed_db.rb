@@ -1,5 +1,7 @@
 class FillSeedDb < ActiveRecord::Migration[7.0]
   def change
+    Organization.destroy_all
+
     orgs = %w[Douglas Fitx BMW REWE].map do |org_name|
       Organization.create(name: org_name)
     end
@@ -14,7 +16,7 @@ class FillSeedDb < ActiveRecord::Migration[7.0]
     from = Time.new(2010, 1, 1)
     to = Time.new(2018, 5, 1)
     
-    10_000.times do
+    100.times do
       quality        = 1.upto(5).to_a.sample
       age_group      = %w[01-19 20-29 30-39 40-49 50-59 60+ ]
       nps            = 0.upto(10).to_a.sample

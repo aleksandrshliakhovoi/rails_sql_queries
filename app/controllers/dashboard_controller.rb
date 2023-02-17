@@ -107,7 +107,7 @@ class DashboardController < ApplicationController
   # end
 
   def high_load_db_with_error
-    10000.times do
+    100.times do
       fifth_task
     end
 
