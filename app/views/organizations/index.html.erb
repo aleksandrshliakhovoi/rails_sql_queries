@@ -1,0 +1,18 @@
+<h1>Organizations</h1>
+<% @orgs.each do |el| %>
+  <p><%= el.name %></p>
+<% end %>
+<div style="border-radius: 5px; box-shadow: 3px 3px rgba(0, 0, 255, .2); background-color: beige; width: 150px; height: 60px; display: flex;
+    align-items: center; justify-content: center;">
+  <%= button_to 'Create Organization', organizations_path, method: :post %>
+</div>
+
+
+<h1>Organization first branches</h1>
+<% @org_first_branches.each do |el| %>
+  <p><%= el.name %></p>
+<% end %>
+<div style="border-radius: 5px; box-shadow: 3px 3px rgba(0, 0, 255, .2); background-color: beige; width: 150px; height: 60px; display: flex;
+    align-items: center; justify-content: center;">
+  <%= button_to 'Create Branch', organization_branches_path(@org_first_branches.first.organization_id), method: :post %>
+</div>
