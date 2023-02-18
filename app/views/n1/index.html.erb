@@ -1,0 +1,8 @@
+<h1>N + 1</h1>
+<% @n1.each do |el| %>
+  <% el.each do |fb|%>
+    <h3>Feedback <%= fb.id %> for branch <%= fb.branch.name %></h3>
+    <p>quality: <%= fb.quality %></p>
+    <p>status <%= fb.status %></p>
+  <% end %>
+<% end %>
